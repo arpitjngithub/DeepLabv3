@@ -1,13 +1,9 @@
-# DeepLabV3 for Semantic Segmentation
-This repository implements the DeepLabV3 model for semantic segmentation, using a training approach involving image patching and selective patch removal based on mask content. This method has led to significant accuracy improvements.
+DeepLabV3 for Semantic Segmentation
+This repository presents an implementation of the DeepLabV3 model for semantic segmentation. The training process incorporates image patching and selective removal of uninformative patches, enhancing segmentation accuracy.
 
+Training Strategy
+To optimize performance, images were padded to ensure dimensions divisible by 224 (e.g., 1024x1360 padded to 1024x1560). During training, patches containing only mask label 0 were removed, concentrating the model's focus on more relevant regions. This approach led to a significant accuracy improvement from 39% to 49%.
 
-## Training Approach
-We padded images to ensure divisibility by 224 (e.g., from 1024x1360 to 1024x1560) and implemented a strategy to remove patches with masks labeled only 0 during training. This focused the model on more informative regions, resulting in a notable accuracy improvement from 39% to 49%.
-
-## Results
-After training, our DeepLabV3 model achieved a validation accuracy of 39% on the test dataset. Loss curves and other metrics are visualized in the results/ directory.
-
-## Contact
-For questions or collaborations, feel free to reach out at suraj.prasad@iitb.ac.i.
+Results
+Post-training, the DeepLabV3 model achieved a validation accuracy of 49% on the test dataset. Detailed visualizations of loss curves and other metrics can be found in the results/ directory.
 
